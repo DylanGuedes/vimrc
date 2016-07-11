@@ -58,10 +58,10 @@ set cuc
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 map <Space> :bnext<cr>
-" map <Left>  :echo "no!"<cr>
-" map <Right> :echo "no!"<cr>
-" map <Up>    :echo "no!"<cr>
-" map <Down>  :echo "no!"<cr>
+map <Left>  :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up>    :echo "no!"<cr>
+map <Down>  :echo "no!"<cr>
 " nnoremap <cr> :nohlsearch<cr>
 
 nnoremap J mzJ`z
@@ -87,6 +87,10 @@ autocmd Filetype typescript setlocal ts=4 sw=4 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
 autocmd Filetype cpp setlocal ts=4 sw=4 expandtab
-colorscheme railscasts
+" colorscheme railscasts
+colorscheme molokai
 
 noswapfile
+" set listchars+=space:.
+" set list
+
