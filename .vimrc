@@ -19,7 +19,12 @@ Plugin 'roman/golden-ratio'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'Igorjan94/codeforces.vim'
-" Plugin 'elixir-lang/vim-elixir'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'powerman/vim-plugin-viewdoc'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'gabrielsimoes/cfparser.vim'
 " Plugin 'janko-m/vim-test'
 
 "       " END HERE
@@ -45,6 +50,12 @@ set cuc
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 map <Space> :bnext<cr>
+map <F4> :CFProblemStatement
+map <F5> :CFDownloadTests
+map <F6> :CFTestAll
+map <F7> :CFLastSubmissions
+map <F8> :CFLogin
+map <F9> :CFSubmit
 " nnoremap <cr> :nohlsearch<cr>
 
 nnoremap J mzJ`z
@@ -66,6 +77,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 nmap :E :Explore
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype typescript setlocal ts=4 sw=4 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=8 sw=8 expandtab
@@ -88,3 +100,5 @@ map! <C-e> </<C-X><C-O>
 set nobackup
 set directory=~/.vim/_temp//
 set numberwidth=5
+let g:jsx_ext_required = 0
+" syntax off
