@@ -5,27 +5,36 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " HERE
-" Plugin 'hail2u/vim-css3-syntax'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'nono/vim-handlebars'
-Plugin 'tomtom/tcomment_vim'
+Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'       " UI statusbar niceties
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-Plugin 'chriskempson/base16-vim'
 Plugin 'dandorman/vim-colors'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'roman/golden-ratio'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'Igorjan94/codeforces.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'powerman/vim-plugin-viewdoc'
-Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-dispatch'
+Plugin 'janko-m/vim-test'
+" Plugin 'vim-scripts/AnsiEsc.vim'
 Plugin 'gabrielsimoes/cfparser.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'powerman/vim-plugin-AnsiEsc'
+Plugin 'slashmili/alchemist.vim'
+" UNUSED PACKAGES
+" Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'benmills/vimux'
+" Plugin 'Igorjan94/codeforces.vim'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'nono/vim-handlebars'
 " Plugin 'janko-m/vim-test'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'powerman/vim-plugin-viewdoc'
 
 "       " END HERE
 "
@@ -56,6 +65,9 @@ map <F6> :CFTestAll
 map <F7> :CFLastSubmissions
 map <F8> :CFLogin
 map <F9> :CFSubmit
+map <F3> :TestSuit
+
+let test#strategy = "dispatch"
 " nnoremap <cr> :nohlsearch<cr>
 
 nnoremap J mzJ`z
