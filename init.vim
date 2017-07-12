@@ -6,21 +6,21 @@ Plugin 'VundleVim/Vundle.vim'
 
 " HERE
 
-Plugin 'godlygeek/tabular'
-Plugin 'bling/vim-airline'       " UI statusbar niceties
+" Plugin 'godlygeek/tabular'
+" Plugin 'bling/vim-airline'       " UI statusbar niceties
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'morhetz/gruvbox'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+" Plugin 'morhetz/gruvbox'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
 Plugin 'dandorman/vim-colors'
-" Plugin 'mdreves/vim-scaladoc'
 " Plugin 'plasticboy/vim-markdown'
 Plugin 'roman/golden-ratio'
 " Plugin 'digitaltoad/vim-pug'
-Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-dispatch'
 " Plugin 'janko-m/vim-test'
-" Plugin 'vim-scripts/AnsiEsc.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/AnsiEsc.vim'
 " Plugin 'gabrielsimoes/cfparser.vim'
 " Plugin 'ktvoelker/sbt-vim'
 " Plugin 'derekwyatt/vim-scala'
@@ -28,7 +28,6 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'elixir-lang/vim-elixir'
 " Plugin 'junegunn/vim-easy-align'
 Plugin 'slashmili/alchemist.vim'
-Plugin 'powerman/vim-plugin-AnsiEsc'
 " Plugin 'python-rope/ropevim'
 " Plugin 'posva/vim-vue'
 " Plugin 'python-mode/python-mode'
@@ -39,10 +38,9 @@ Plugin 'powerman/vim-plugin-AnsiEsc'
 " Plugin 'benmills/vimux'
 " Plugin 'Igorjan94/codeforces.vim'
 " Plugin 'chriskempson/base16-vim'
-Plugin 'nono/vim-handlebars'
+" Plugin 'nono/vim-handlebars'
+" Plugin 'joukevandermaas/vim-ember-hbs'
 " Plugin 'janko-m/vim-test'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'powerman/vim-plugin-viewdoc'
 
 "       " END HERE
 "
@@ -55,14 +53,14 @@ set t_Co=256 " Force 256 colors
 
 
 set t_ut= " improve screen clearing by using the background color
-set background=dark
+" set background=dark
 syntax enable
 set enc=utf-8
-set term=screen-256color
+" set term=screen-256color
 " let $TERM='screen-256color'
 
 set cul
-set cuc
+" set cuc
 " :highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
@@ -73,7 +71,7 @@ map <Space> :bnext<cr>
 " map <F7> :CFLastSubmissions
 " map <F8> :CFLogin
 " map <F9> :CFSubmit
-" map <F3> :TestSuit
+map <F3> :TestSuite
 "
 let test#strategy = "dispatch"
 " nnoremap <cr> :nohlsearch<cr>
@@ -90,7 +88,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set background=dark
+" set background=dark
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
@@ -104,9 +102,9 @@ autocmd Filetype c setlocal ts=8 sw=8 expandtab
 autocmd Filetype cpp setlocal ts=8 sw=8 expandtab
 autocmd Filetype latex setlocal ts=4 sw=4 expandtab
 autocmd Filetype tex setlocal ts=4 sw=4 expandtab
-colorscheme molokai
+" colorscheme molokai
 " colorscheme gruvbox
-
+colorscheme PaperColor
 noswapfile
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -129,7 +127,9 @@ set numberwidth=5
 " syntax off
 "
 "
-set spell spelllang=pt
+" set spell spelllang=pt
 " syntax spell toplevel
-set colorcolumn=+1
-set textwidth=80
+let ropevim_vim_completion=0
+let ropevim_extended_complete=0
+let ropevim_codeassist_maxfixes=0
+let ropevim_enable_autoimport=0
